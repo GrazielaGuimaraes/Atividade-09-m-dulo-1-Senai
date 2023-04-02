@@ -9,6 +9,7 @@ export const Avatar = (props) => {
         src={props.src}
         className="img-thumbnail"
         alt={props.alt}
+        title='Lab 365'
       />
     );
 }

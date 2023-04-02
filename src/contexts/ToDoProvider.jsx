@@ -18,16 +18,19 @@ export const ToDoProvider = ({children}) => {
         { id: 2, text: "Praticar com um projeto", done: true },
         { id: 3, text: "Divulgar meu resultado no LinkedIn", done: false },
       ]);
-    
+
+
+     
       const addToDo = (text) => {
         const newToDo = {
-          id: Date.now(),
+          id: Date.now(), //Poderia ser id: toDos.length + 1
           text,
           done: false,
         };
         setToDos([...toDos, newToDo]);
       };
     
+      //Marcar e desmarcar checkbox finalizadas
       const markTodo = (id) => {
         const newToDos = toDos.map((todo) => {
           if (todo.id === id) {
@@ -38,6 +41,7 @@ export const ToDoProvider = ({children}) => {
         setToDos(newToDos);
       };
     
+      //Filtram tarefas finalizadas e não finalizadas
       const completedToDos = toDos.filter((todo) => todo.done);
       const pendingToDos = toDos.filter((todo) => !todo.done);
     
