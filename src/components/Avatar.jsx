@@ -1,7 +1,20 @@
 import React from 'react'
 
 
-export class Avatar extends React.Component {
+/* ATIVIDADE 9 - modificar componente de classe para componente funcional */
+export const Avatar = (props) => {
+
+   return (
+      <img
+        src={props.src}
+        className="img-thumbnail"
+        alt={props.alt}
+      />
+    );
+}
+
+
+/*export class Avatar extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -15,16 +28,4 @@ export class Avatar extends React.Component {
       />
     );
   }
-}
-
-/* ATIVIDADE 9 */
-{/*export const Avatar = (props) => {
-
-   return (
-      <img
-        src={props.src}
-        className="img-thumbnail"
-        alt={props.alt}
-      />
-    );
-}*/}
+}*/
